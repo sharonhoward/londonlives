@@ -1,4 +1,4 @@
 # stuff from London Lives
 
-Coroners' Inquests
+[Coroners' Inquests](https://github.com/sharonhoward/londonlives/tree/master/coroners_inquests)
 -------------
