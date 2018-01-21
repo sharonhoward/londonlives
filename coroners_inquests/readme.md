@@ -24,7 +24,7 @@ The information provided about verdicts and causes of deaths may be less reliabl
 
 The dataset records 2894 inquests, giving dates, places, names of the deceased, verdicts and causes of death, and indicates inquests for children, prisoners in custody, and multiple deceased.. It does not include details of the various documents in each inquest, or the text of any documents, though it does note where depositions are present.
 
-**wa_coroners_inquests_v1.tsv** (January 2018)
+**wa_coroners_inquests_v1-1.tsv** (January 2018)
 
 | field | description |
 |------|------------------|
