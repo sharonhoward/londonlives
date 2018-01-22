@@ -44,6 +44,14 @@ The dataset records 2894 inquests, giving dates, places, names of the deceased, 
 | lonlives_document_ref | the London Lives document reference |
 | source | archival source information |
 
+### Further reading
+
+* Fisher, Pam. *The Politics of Sudden Death: The Office and Role of the Coroner in England and Wales, 1726-1888*. Leicester University PhD, 2007. 
+* Forbes, Thomas R., ‘Coroners’ Inquests in the County of Middlesex, England, 1819–42’, *Journal of the History of Medicine and Allied Sciences*, 32, no. 4 (1977).
+* Forbes, Thomas R., ‘Inquests into London and Middlesex Homicides, 1675-1782’, *The Yale Journal of Biology and Medicine*, 50, no. 2 (1977).
+* Forbes, Thomas R., ‘Deadly Parents: Child Homicide in Eighteenth– and Nineteenth–Century England’, *Journal of the History of Medicine and Allied Sciences*, 41, no. 2 (1986).
+* Sharpe, James and J. R. Dickinson, ‘Coroners’ Inquests in an English County, 1600–1800: A Preliminary Survey’, *Northern History*, 48, no. 2 (2011).
+
 
 Acknowledgments
 --------
@@ -56,7 +64,7 @@ The original documents are held at the Westminster Abbey Muniment Room.
 
 The London Lives project (under the name Plebeian Lives) was funded by the Economic and Social Research Council between 2006-2010.
 
-License
+Re-use
 ---------
 
 The dataset and all accompanying documentation are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
@@ -72,5 +80,5 @@ Citation
 
 Suggested citation:
 
-Sharon Howard, A Catalogue of the Westminster Coroners' Inquests 1760-1799, version 1.0 (2018), based on data from *www.londonlives.org*.
+Sharon Howard, A Catalogue of Westminster Coroners' Inquests 1760-1799, version 1.1 (2018), based on data from *www.londonlives.org*.
 
