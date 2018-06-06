@@ -4,7 +4,10 @@ London Lives Coroners' Inquests
 [London Lives 1690-1800: Crime, Poverty and Social Policy in the
 Metropolis](http://www.londonlives.org) is an online resource
 providing 'a wide range of primary sources about eighteenth-century
-London, with a particular focus on plebeian Londoners'. The site includes three series of [coroners' inquests](https://www.londonlives.org/static/IC.jsp): Middlesex; City and Southwark; Westminster. So far (January 2018), I have compiled a catalogue of the Westminster inquests as a finding aid. I plan to do the same work for the other two series and possibly to add plain text versions of some of the documents (particularly the formal inquisitions and depositions). 
+London, with a particular focus on plebeian Londoners'. The site includes three series of [coroners' inquests](https://www.londonlives.org/static/IC.jsp): Middlesex; City and Southwark; Westminster. So far (June 2018), I have compiled a catalogue of the Westminster inquests as a finding aid and added plain text files of the formal inquisitions. I plan to do the same work for the other two series. 
+
+
+This is version 2.0 of the data, updated in June 2018 to include text files of the Westminster inquisitions. The initial release of metadata only was in January 2018.
 
 
 Westminster Coroners' Inquests, 1760-1799
@@ -12,23 +15,26 @@ Westminster Coroners' Inquests, 1760-1799
 
 Inquests were usually held within a few days of a sudden, violent, accidental or unexplained death, at a local alehouse, parish workhouse or the location of the death itself. Deaths of prisoners in custody were subject to an automatic inquest. Most coroners came from a legal or medical background, and in Westminster they were appointed by the Dean and Chapter of Westminster Abbey.
 
-The inquests produced a range of documents, usually bundled into a single set which uses the formal inquisition as its wrapper. The majority of Westminster inquests include depositions as well as the inquisition, warrants, jury lists and verdicts and other more miscellaneous papers. For example, sometimes there are letters or notes written to the coroner to inform him of a death, and suicide cases may include material written by the deceased.
+The inquests produced a range of documents, usually bundled into a single set which uses the formal inquisition as its wrapper. The majority of Westminster inquests include depositions as well as the inquisition (the formal record of the inquest, its findings and verdict), warrants, jury lists and verdicts and other more miscellaneous papers. For example, sometimes there are letters or notes written to the coroner to inform him of a death, and suicide cases may include material written by the deceased.
 
-I have been greatly aided in creating this dataset by the catalogue for the inquests 1760-1771 created by Tim Hitchcock, and some of the information from that dataset has been incorporated into this new data. I was able to use the manually-compiled catalogue as a benchmark to test the semi-automated methods for identifying individual inquests in the London Lives XML data. 
+I have been greatly aided in creating this dataset by the catalogue for the inquests 1760-1771 created by Tim Hitchcock, and some of the information from that dataset has been incorporated into this new data. I was also able to use the manually-compiled catalogue as a benchmark to test the semi-automated methods for identifying individual inquests in the London Lives XML data. 
 
 As a result, although I haven't individually read most of the cases, I am confident that I have correctly identified virtually all inquests and the identity of their subjects. This was also aided by the original organisation of the Westminster inquests, and the fact that inquisitions were both highly regular in format (many are pre-printed forms, with gaps to fill in details of a case) and carefully written; as a result the transcriptions are more accurate than for many more informal London Lives documents. 
 
 The information provided about verdicts and causes of deaths may be less reliable and should only be used as a guide. The data on causes of death was partly incorporated from Tim Hitchcock's catalogue of the inquests for 1760-1771.
 
-### The dataset
+The dataset
+------
 
-The dataset records 2894 inquests, giving dates, places, names of the deceased, verdicts and causes of death, and indicates inquests for children, prisoners in custody, and multiple deceased.. It does not include details of the various documents in each inquest, or the text of any documents, though it does note where depositions are present.
+The dataset records 2894 inquests, giving dates, places, names of the deceased, verdicts and causes of death, and indicates inquests for children, prisoners in custody, and multiple deceased.. It does not include details of the various documents in each inquest, though it does note where depositions are present.
+
+### metadata
 
 **wa_coroners_inquests_v1-1.tsv** (January 2018)
 
 | field | description |
 |------|------------------|
-| img_id | unique identifier, based on London Lives ID for the first image in the inquest |
+| first_img | unique identifier, based on London Lives ID for the first image in the inquest |
 | inquisition_img | London Lives image ID for the text of the inquisition |
 | doc_date | dates (which should normally be the inquest dates) in most cases have been extracted from the London Lives XML, with any missing dates filled in manually |
 | parish | parish names have been extracted from the inquisition text |
@@ -44,6 +50,21 @@ The dataset records 2894 inquests, giving dates, places, names of the deceased, 
 | lonlives_document_ref | the London Lives document reference |
 | source | archival source information |
 
+# inquisition texts
+
+2890 .txt files in [wa_inq_txt](wa_inq_txt)
+
+The filename for each text is derived from London Lives image IDs, as used in the metadata, so that the files can easily be cross-referenced to the metadata and the website. 
+
+Specifically, the filenames consist of **inquisition_img** and  the *numerical component* of **first_img**, separated by an underscore, eg:
+
+    WACWIC652000005_652000004.txt
+
+The plain text was extracted from the XML files using the Python BeautifulSoup library. Paragraph tags were replaced with line breaks and all other XML formatting was removed.
+
+A small number of the inquests do not have corresponding inquisition texts because either the documents/images are missing, or the images have not been rekeyed.
+
+
 ### Further reading
 
 * Fisher, Pam. *The Politics of Sudden Death: The Office and Role of the Coroner in England and Wales, 1726-1888*. Leicester University PhD, 2007. 
@@ -56,7 +77,7 @@ The dataset records 2894 inquests, giving dates, places, names of the deceased, 
 Acknowledgments
 --------
 
-The data has been created using the transcriptions of the Sessions Papers published at London Lives. I am deeply grateful to Tim Hitchcock and Bob Shoemaker, the London Lives project directors, for agreeing to share the data.
+The data has been created using the transcriptions of the Inquests published at London Lives. I am deeply grateful to Tim Hitchcock and Bob Shoemaker, the London Lives project directors, for agreeing to share the data.
 
 I also used a catalogue of the Westminster inquests for 1760-1771 previously created by Tim Hitchcock in the course of compiling this data, and with his consent have incorporated some of that data (particularly causes of death). I am also appreciative of his willingness to share his knowledge of the inquest documents.
 
@@ -80,5 +101,4 @@ Citation
 
 Suggested citation:
 
-Sharon Howard, A Catalogue of Westminster Coroners' Inquests 1760-1799, version 1.1 (2018), based on data from *www.londonlives.org*.
-
+Sharon Howard, A Catalogue of Westminster Coroners' Inquests 1760-1799, version 2.0 (2018), based on data from *www.londonlives.org*.
